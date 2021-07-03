@@ -13,3 +13,9 @@ const savingsAccount1 = new SavingsAccount('St. Leste', client1, 50);
 const savingsAccount2 = new SavingsAccount('St. Oeste', client2, 50);
 
 console.log(savingsAccount1, '\n', currentAcount1 );
+
+savingsAccount1.withdraw(10);
+currentAcount1.deposit(20);
+currentAcount1.withdraw(10)
+
+console.log(savingsAccount1, '\n', currentAcount1 );

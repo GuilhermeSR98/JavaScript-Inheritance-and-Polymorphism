@@ -1,8 +1,8 @@
 import { Employee } from "./Employee.js";
 
-export class Manager extends Employee{
+export class Director extends Employee{
     constructor(name, salary, cpf){
         super(name, salary, cpf);
-        this._bonification = 1.1;
+        this._bonification = 2;
     }
 }

@@ -1,15 +1,17 @@
 export class Account{
-    constructor(inicialBalance, client, agency){
-        this._balance = inicialBalance;
+    constructor(client, agency, openingBalance){
         this._client = client;
         this._agency = agency;
+        this._balance = openingBalance;
     } 
     withdraw(value) {
-        if(this._balance < value || value <= 0) {
+        const rate = 1
+        const amount = value * rate;
+        if(this._balance < amount || value < 0) {
             console.log(`Insufficient balance to do a ${value} withdraw.`);
             return;
         }
-        this._balance -= value;
+        this._balance -= amount;
         return value;
     }
  
@@ -30,4 +32,18 @@ export class Account{
         const amount = this.withdraw(value);
         acount.deposit(amount);
     }  
+
+    set client(newValue){
+        if(newValue instanceof Client){
+            this._client = newValue;
+        }
+    }
+
+    get client(){
+        return this._client;
+    }
+
+    get balance(){
+        return this._balance;
+    }
 }

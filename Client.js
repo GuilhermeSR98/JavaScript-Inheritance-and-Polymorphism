@@ -17,7 +17,4 @@ export class Client{
     get rg(){
         return this._rg;
     }
-    authenticate(password){
-        return this._password == password; 
-     }
 }

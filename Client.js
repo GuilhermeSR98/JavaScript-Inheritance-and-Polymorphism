@@ -3,6 +3,7 @@ export class Client{
         this._name = name;
         this._cpf = cpf;
         this._rg = rg;
+        this._password = 22222;
     }
     
     get name(){
@@ -16,4 +17,7 @@ export class Client{
     get rg(){
         return this._rg;
     }
+    authenticate(password){
+        return this._password == password; 
+     }
 }

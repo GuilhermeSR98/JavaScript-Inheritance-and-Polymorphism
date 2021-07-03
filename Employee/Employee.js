@@ -9,7 +9,7 @@ export class Employee{
     registerPassword(password){
         this._password = password;
     }
-    get password(){
-        return this._password;
+    authenticate(password){
+       return this._password == password; 
     }
 }

@@ -7,6 +7,6 @@ export class CurrentAccount extends Account{
     }
     withdraw(value) {
         const rate = 1.1
-        return _withdraw(value, rate);
+        return this._withdraw(value, rate);
     }
 }

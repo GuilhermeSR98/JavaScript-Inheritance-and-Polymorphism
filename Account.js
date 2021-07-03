@@ -1,9 +1,14 @@
+// Abstract Class
 export class Account{
     constructor(client, agency, openingBalance){
+        if(this.constructor == Account){
+            throw new Error("you shouldn't instantiate an object of an abstract class.");
+        }
         this._client = client;
         this._agency = agency;
         this._balance = openingBalance;
-    } 
+    }
+
     withdraw(value) {
         const rate = 1;
         return this._withdraw(value, rate);

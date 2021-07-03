@@ -1,10 +1,12 @@
 export class Client{
-    name;
-    _cpf;
-    _rg;
-
+    constructor(name, cpf, rg){
+        this._name = name;
+        this._cpf = cpf;
+        this._rg = rg;
+    }
+    
     get name(){
-        return this.name;
+        return this._name;
     }
 
     get cpf(){
@@ -13,11 +15,5 @@ export class Client{
 
     get rg(){
         return this._rg;
-    }
-
-    constructor(name, cpf, rg){
-        this.name = name;
-        this._cpf = cpf;
-        this._rg = rg;
     }
 }

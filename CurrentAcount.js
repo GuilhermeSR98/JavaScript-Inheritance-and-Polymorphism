@@ -1,9 +1,6 @@
 import { Client } from './Client.js'
 
-export class CurrentAcount{
-    agency;
-    _balance = 0;
-    _client;
+export class CurrentAcount{ 
     static numberOfAccounts = 0;
 
     set client(newValue){
@@ -23,6 +20,7 @@ export class CurrentAcount{
     constructor(agency, client){
         this.agency = agency;
         this.client = client;
+        this._balance = 0;
         CurrentAcount.numberOfAccounts ++;
     }
 
@@ -35,7 +33,7 @@ export class CurrentAcount{
        return value;
    }
 
-   deposit(value){
+    deposit(value){
        if(value > 0) {
          this._balance += value;  
        }
@@ -44,7 +42,7 @@ export class CurrentAcount{
        }
    }
 
-   transfer(value, acount){
+    transfer(value, acount){
        if(value <= 0 || value > this.balance){
            console.log(`Unable to transfer.`);
            return;

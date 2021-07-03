@@ -5,7 +5,10 @@ export class Account{
         this._balance = openingBalance;
     } 
     withdraw(value) {
-        const rate = 1
+        const rate = 1;
+        return this._withdraw(value, rate);
+    }
+    _withdraw(value, rate){
         const amount = value * rate;
         if(this._balance < amount || value < 0) {
             console.log(`Insufficient balance to do a ${value} withdraw.`);

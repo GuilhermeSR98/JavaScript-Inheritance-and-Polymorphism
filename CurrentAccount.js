@@ -1,6 +1,6 @@
 import { Client } from './Client.js'
 
-export class CurrentAcount{ 
+export class CurrentAccount{ 
     static numberOfAccounts = 0;
 
     set client(newValue){
@@ -21,7 +21,7 @@ export class CurrentAcount{
         this.agency = agency;
         this.client = client;
         this._balance = 0;
-        CurrentAcount.numberOfAccounts ++;
+        CurrentAccount.numberOfAccounts ++;
     }
 
     withdraw(value) {

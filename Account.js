@@ -10,8 +10,7 @@ export class Account{
     }
 
     withdraw(value) {
-        const rate = 1;
-        return this._withdraw(value, rate);
+        throw new Error("The withdraw method from account is abstract");
     }
     _withdraw(value, rate){
         const amount = value * rate;

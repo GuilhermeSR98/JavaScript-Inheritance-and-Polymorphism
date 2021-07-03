@@ -1,8 +1,7 @@
-import { CurrentAccount } from "./CurrentAccount.js";
 import { Client } from "./Client.js";
-import { SavingsAccount } from './SavingsAccount.js';
-import { Account } from './Account.js';
-import { SalaryAccount } from "./SalaryAccount.js";
+import { CurrentAccount } from "./Account/CurrentAccount.js";
+import { SavingsAccount } from './Account/SavingsAccount.js';
+import { SalaryAccount } from "./Account/SalaryAccount.js";
 
 const client1 = new Client('Guilherme', '028.544.021-90', 5384207);
 const client2 = new Client('Eduarda', '312.014.021-52', 2309100);
